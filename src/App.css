@@ -1,0 +1,75 @@
+body{
+  background-color: var(--secondary-color);
+}
+article{
+  display: grid;
+  grid-template-rows: 35% 65%;
+  width: 95%;
+  height: 500px;
+  margin: 60px auto;
+  padding: 60px 16px 0 16px;
+  background-color: var(--first-color);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 100px;
+}
+.Form{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-content:center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 75px;
+  border-bottom: 2px solid var(--secondary-color)
+}
+.Form-input{
+  width: 100%;
+  padding: 0 12px;
+  font-size: 3.2rem;
+  font-weight: 400;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 8px;
+  color: var(--black-color);
+}
+.Form-label{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--quaternary-color);
+}
+.Div{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-self: center;
+  min-height: fit-content;
+  height: 200px;
+  text-align: left;
+
+}
+.Div-p{
+  min-height:min-content;
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: 800;
+  color: var(--black-color);
+}
+.Button{
+  position: absolute;
+  bottom: -30px;
+  right: 45%;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+.Div-span{
+  color: var(--accent-color)
+}
