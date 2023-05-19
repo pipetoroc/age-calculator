@@ -33,6 +33,9 @@ article{
   border-radius: 8px;
   color: var(--black-color);
 }
+.Form-input::placeholder{
+  font-size: 2.8rem;
+}
 .Form-label{
   display: flex;
   flex-direction: column;
@@ -72,4 +75,8 @@ article{
 }
 .Div-span{
   color: var(--accent-color)
+}
+.error{
+  font-size: 1.6rem;
+  color: var(--error-color);
 }
