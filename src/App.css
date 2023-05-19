@@ -76,7 +76,14 @@ article{
 .Div-span{
   color: var(--accent-color)
 }
-.error{
-  font-size: 1.6rem;
+.Span-error{
+  font-size: 1.2rem;
   color: var(--error-color);
+  text-transform: none;
+  font-weight: 400;
+  font-style: italic;
+}
+.error{
+  color: var(--error-color);
+  border: var(--error-color);
 }

@@ -8,6 +8,7 @@ function App () {
   const [yearResult, setYearResult] = useState('--')
   const [monthResult, setMonthResult] = useState('--')
   const [dayResult, setDayResult] = useState('--')
+  const [errors, setErrors] = useState([])
 
   const handleChangeDay = evt => {
     setDay(evt.target.value)
@@ -26,6 +27,13 @@ function App () {
 
     const currentDate = new Date()
     const userDate = new Date(`${year}-${month}-${day}`)
+
+    const validationErrors = []
+
+    if (!day || !year || !month) {
+      validationErrors.push('This field is required')
+    }
+    setErrors([validationErrors])
 
     let difference = currentDate - userDate
 
@@ -48,13 +56,16 @@ function App () {
       <article>
         <form className='Form' onSubmit={handleSubmit}>
           <label className='Form-label'> day
-            <input className='Form-input' type='number' name='day' required placeholder='DD' onChange={handleChangeDay}></input>
+            <input className='Form-input' type='number' name='day' placeholder='DD' onChange={handleChangeDay}></input>
+            <span className='Span-error'>{errors}</span>
           </label>
           <label className='Form-label'> month
-            <input className='Form-input' type='number' name='month' required placeholder='MM' onChange={handleChangeMonth}></input>
+            <input className='Form-input' type='number' name='month' placeholder='MM' onChange={handleChangeMonth}></input>
+            <span className='Span-error'>{errors}</span>
           </label>
           <label className='Form-label'> year
-            <input className='Form-input' type='number' name='year' required placeholder='YYYY' onChange={handleChangeYear}></input>
+            <input className='Form-input' type='number' name='year' placeholder='YYYY' onChange={handleChangeYear}></input>
+            <span className='Span-error'>{errors}</span>
           </label>
         <button className='Button'> x </button>
         </form>
