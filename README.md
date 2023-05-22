@@ -1,16 +1,12 @@
 # Age Calculator App
+This is a solution to the Age calculator app challenge on Frontend Mentor.  
 This is a simple age calculator application developed as a practice project to enhance my web development skills. The application allows users to calculate their age based on the input of their birthdate.
 
-## Age Calculator App
+## Desktop View: 1440px
 ![ScreenShot desktop view](./src/assets/images/screenShot-desktop.png)
 ---
+## Mobile View: 375px
 ![ScreenShot mobile view](./src/assets/images/Screenshot-mobile.png)
-
-# Features
-User-friendly interface.
-Input validation to ensure correct date format.
-Real-time calculation of the user's age.
-Clear button to reset the input fields.
 
 # Technologies Used
 - HTML
@@ -19,7 +15,7 @@ Clear button to reset the input fields.
 - React JS
 
 # Demo
-You can visit the project clicking [demo-link](https://www.example.com)
+You can visit the project clicking [demo-link](https://pipetoroc.github.io/age-calculator/)
 
 # License
 This project is licensed under the MIT License. Feel free to modify and use it according to your needs.
