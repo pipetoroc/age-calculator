@@ -23,13 +23,13 @@ function App () {
 
     const passedDay = Math.floor(difference / milisecondsPerMinute)
 
-    if (passedYear) {
+    if (passedYear && passedYear >= 0 && year && month && day) {
       setYearResult(passedYear)
     }
-    if (passedMonths) {
+    if (passedMonths && year && month && day) {
       setMonthResult(passedMonths)
     }
-    if (passedDay) {
+    if (passedDay && year && month && day) {
       setDayResult(passedDay)
     }
   }

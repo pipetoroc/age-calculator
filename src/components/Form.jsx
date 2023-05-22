@@ -47,18 +47,21 @@ export default function Form ({ handleDateSubmit }) {
     handleDateSubmit(year, month, day)
   }
 
+  const errorInputClass = yearError || monthError || dayError ? 'Form-input-error' : 'Form-input'
+  const errorLabelClass = yearError || monthError || dayError ? 'Form-label-error' : 'Form-label'
+
   return (
     <form className='Form' onSubmit={handleSubmit}>
-      <label className='Form-label'> day
-        <input className='Form-input' type='number' name='day' placeholder='DD' onChange={handleChangeDay}></input>
+      <label className={errorLabelClass}> day
+        <input className={errorInputClass} type='number' name='day' placeholder='DD' onChange={handleChangeDay}></input>
         <span className='Span-error'>{dayError}</span>
       </label>
-      <label className='Form-label'> month
-        <input className='Form-input' type='number' name='month' placeholder='MM' onChange={handleChangeMonth}></input>
+      <label className={errorLabelClass}> month
+        <input className={errorInputClass} type='number' name='month' placeholder='MM' onChange={handleChangeMonth}></input>
         <span className='Span-error'>{monthError}</span>
       </label>
-      <label className='Form-label'> year
-        <input className='Form-input' type='number' name='year' placeholder='YYYY' onChange={handleChangeYear}></input>
+      <label className={errorLabelClass}> year
+        <input className={errorInputClass} type='number' name='year' placeholder='YYYY' onChange={handleChangeYear}></input>
         <span className='Span-error'>{yearError}</span>
       </label>
         <button className='Button'>  </button>
